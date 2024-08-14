@@ -15,7 +15,7 @@ async def wait_n(n: int, max_delay: int) -> typing.List[float]:
 
     Args:
         - n (int): the number of times to execute wait_random concurrently.
-        - max_delay (int): the maximum delay in seconds 
+        - max_delay (int): the maximum delay in seconds
         for each "wait_random" execution.
 
     Returns:
