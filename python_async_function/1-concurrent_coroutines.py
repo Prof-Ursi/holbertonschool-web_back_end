@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
 """ Module with a function for concurrent execution of wait_random. """
 
-import asyncio
-import typing
+from asyncio import gather
+from typing import List
 
 wait_random = __import__("0-basic_async_syntax").wait_random
 
 
-async def wait_n(n: int, max_delay: int) -> typing.List[float]:
+async def wait_n(n: int, max_delay: int) -> List[float]:
     """
     Description:
-        Executes the "wait_random" coroutine concurrently
+        Executes the "wait_random()" coroutine concurrently
         a specified number of times with a specified "max_delay".
 
     Args:
-        - n (int): the number of times to execute wait_random concurrently.
+        - n (int): the number of times to execute wait_random() concurrently.
         - max_delay (int): the maximum delay in seconds
         for each "wait_random" execution.
 
@@ -27,6 +27,6 @@ async def wait_n(n: int, max_delay: int) -> typing.List[float]:
     for _ in range(n):
         delay_list.append(wait_random(max_delay))
 
-    delay_chart = await asyncio.gather(*delay_list)
+    delay_chart = await gather(*delay_list)
 
     return sorted(delay_chart)
