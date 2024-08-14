@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Module with a function
-to sum a mixed list comprised of integer and float elements.
+Module with a function to sum a mixed list
+comprised of integers and floating point numbers.
 """
 
 from typing import List, Union
