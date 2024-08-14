@@ -17,7 +17,8 @@ async def task_wait_n(n: int, max_delay: int) -> List[float]:
         a specified number of times with a specified "max_delay".
 
     Args:
-        - n (int): the number of times to execute task_wait_random() concurrently.
+        - n (int): the number of times to execute
+        task_wait_random() concurrently.
         - max_delay (int): the maximum delay in seconds
         for each task_wait_random() execution.
 
